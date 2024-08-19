@@ -45,7 +45,7 @@
     texliveTeTeX
     fzf
     fd
-    exa
+    eza
     cascadia-code
     fira-code
     inconsolata
@@ -146,4 +146,5 @@
   xsession.windowManager.awesome.enable = true;
   targets.genericLinux.enable = true;
   services.udiskie.enable = true;
+  nixpkgs.config.allowUnfree = true;
 }
