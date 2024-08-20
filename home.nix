@@ -147,4 +147,5 @@
   targets.genericLinux.enable = true;
   services.udiskie.enable = true;
   nixpkgs.config.allowUnfree = true;
+  hardware.opengl.enable = true;
 }
