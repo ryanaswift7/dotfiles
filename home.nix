@@ -143,7 +143,7 @@
   programs.home-manager.enable = true;
 
   # MY ADDITIONAL MODIFICATIONS
-  services.xserver.windowManager.awesome.enable = true;
+  xsession.windowManager.awesome.enable = true;
   targets.genericLinux.enable = true;
   services.udiskie.enable = true;
   nixpkgs.config.allowUnfree = true;
