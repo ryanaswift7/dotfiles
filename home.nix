@@ -150,4 +150,5 @@
   services.udiskie.enable = true;
   nixpkgs.config.allowUnfree = true;
   fonts.fontconfig.enable = true;
+  programs.zsh.enable = true;
 }
