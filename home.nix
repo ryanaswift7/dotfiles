@@ -46,6 +46,7 @@
     fzf
     fd
     eza
+    nerdfonts
     cascadia-code
     fira-code
     inconsolata
