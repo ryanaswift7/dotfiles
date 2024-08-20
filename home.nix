@@ -115,6 +115,7 @@
     ".zshrc".source = "/home/ryan/.dotfiles/.zshrc";
     ".bashrc".source = "/home/ryan/.dotfiles/.bashrc";
     ".xscreensaver".source = "/home/ryan/.dotfiles/.xscreensaver";
+    ".alacritty.toml".source = "/home/ryan/.dotfiles/alacritty.toml";
 
 
   };
