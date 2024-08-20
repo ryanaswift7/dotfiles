@@ -148,4 +148,5 @@
   targets.genericLinux.enable = true;
   services.udiskie.enable = true;
   nixpkgs.config.allowUnfree = true;
+  fonts.fontconfig.enable = true;
 }
