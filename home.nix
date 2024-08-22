@@ -151,12 +151,12 @@
   programs.home-manager.enable = true;
 
   # MY ADDITIONAL MODIFICATIONS
+  xsession.enable = true;
   xsession.windowManager.awesome.enable = true;
   targets.genericLinux.enable = true;
   services.udiskie.enable = true;
   nixpkgs.config.allowUnfree = true;
   fonts.fontconfig.enable = true;
-  xsession.enable = true;
 
   programs.zsh = {
       enable = true;
