@@ -179,8 +179,8 @@
 
     programs.git = {
         enable = true;
-        userName = "Ryan Ubuntu20VM";
-        userEmail = "nope@proton.me";
+        userName = "Ryan Swift";
+        userEmail = "ryanswif@usc.edu";
       };
 
 
