@@ -57,11 +57,15 @@
     rubik
     virt-manager
     git
+    lazygit
     vlc
     ripgrep
     udiskie
     tmux
     libgccjit
+    clipman
+    starship
+    gh
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -114,10 +118,11 @@
     "Pictures/wallpapers/digital-art-anime-cartoon-city-road-bicycle-1745701-wallhere.com.jpg".source = 
             "/home/ryan/.dotfiles/digital-art-anime-cartoon-city-road-bicycle-1745701-wallhere.com.jpg";
     ".wezterm.lua".source = config.lib.file.mkOutOfStoreSymlink "/home/ryan/.dotfiles/.wezterm.lua";
-    ".zshrc".source = "/home/ryan/.dotfiles/.zshrc";
+    # ".zshrc".source = "/home/ryan/.dotfiles/.zshrc";
     ".bashrc".source = "/home/ryan/.dotfiles/.bashrc";
     ".xscreensaver".source = "/home/ryan/.dotfiles/.xscreensaver";
     ".alacritty.toml".source = "/home/ryan/.dotfiles/alacritty.toml";
+    ".config/starship.toml".source = "/home/ryan/.dotfiles/starship.toml";
 
 
   };
@@ -151,6 +156,32 @@
   services.udiskie.enable = true;
   nixpkgs.config.allowUnfree = true;
   fonts.fontconfig.enable = true;
-  programs.zsh.enable = true;
   xsession.enable = true;
+
+  programs.zsh = {
+      enable = true;
+      autosuggestion.enable = true;
+      enableCompletion = true;
+      syntaxHighlighting.enable = true;
+      oh-my-zsh = {
+          enable = true;
+          plugins = [
+            "git"
+            "sudo"
+            "jump"
+            "copypath"
+            "starship"
+            "zsh-interactive-cd"
+          ];
+          theme = "robbyrussell";
+        };
+    };
+
+    programs.git = {
+        enable = true;
+        userName = "Ryan Ubuntu20VM";
+        userEmail = "nope@proton.me";
+      };
+
+
 }
