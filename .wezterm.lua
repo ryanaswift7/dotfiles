@@ -12,6 +12,7 @@ config.window_close_confirmation = "NeverPrompt"
 config.font = wezterm.font("FiraCode Nerd Font")
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.97
+config.front_end = "WebGpu"
 
 -- change the tab switch keybind to ALT bc window manager uses SUPER
 config.keys = {
