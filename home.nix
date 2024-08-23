@@ -44,15 +44,15 @@
     fzf
     fd
     eza
-    # nerdfonts
+    nerdfonts
     cascadia-code
-    # fira-code
-    # inconsolata
-    # inter
-    # jetbrains-mono
-    # meslo-lgs-nf
-    # roboto
-    # rubik
+    fira-code
+    inconsolata
+    inter
+    jetbrains-mono
+    meslo-lgs-nf
+    roboto
+    rubik
     virt-manager
     lazygit
     vlc
@@ -121,10 +121,10 @@
     ".xscreensaver".source = "/home/ryan/.dotfiles/.xscreensaver";
     ".alacritty.toml".source = "/home/ryan/.dotfiles/alacritty.toml";
     ".config/starship.toml".source = "/home/ryan/.dotfiles/starship.toml";
-    ".fonts" = {
-        recursive = true;
-        source = "/home/ryan/.dotfiles/.fonts";
-      };
+    # ".fonts" = {
+    #     recursive = true;
+    #     source = "/home/ryan/.dotfiles/.fonts";
+    #   };
 
 
   };
