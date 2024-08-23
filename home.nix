@@ -183,5 +183,12 @@
         userEmail = "ryanswif@usc.edu";
       };
 
+    programs.neovim = {
+       enable = true;
+       withPython3 = true;
+       plugins = with pkgs.vimPlugins; [
+         nvim-treesitter.withAllGrammars
+       ];
+      };
 
 }
