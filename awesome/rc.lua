@@ -64,7 +64,7 @@ editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- My vars
-browser = "brave-browser"
+browser = "brave" --"brave-browser"
 file_manager = "pcmanfm"
 
 -- Default modkey.
