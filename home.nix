@@ -187,7 +187,7 @@
        plugins = with pkgs.vimPlugins; [
          nvim-treesitter.withAllGrammars
        ];
-       extraPackages = "libgccjit";
+       extraPackages = [ pkgs.libgccjit ];
       };
 
 }
