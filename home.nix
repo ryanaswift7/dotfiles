@@ -59,7 +59,7 @@
     ripgrep
     udiskie
     tmux
-    libgccjit
+    libgcc
     clipman
     starship
     gh
@@ -187,7 +187,7 @@
        plugins = with pkgs.vimPlugins; [
          nvim-treesitter.withAllGrammars
        ];
-       extraPackages = [ "gcc" ];
+       extraPackages = [ pkgs.gcc ];
       };
 
 }
