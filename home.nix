@@ -121,6 +121,10 @@
     ".xscreensaver".source = "/home/ryan/.dotfiles/.xscreensaver";
     ".alacritty.toml".source = "/home/ryan/.dotfiles/alacritty.toml";
     ".config/starship.toml".source = "/home/ryan/.dotfiles/starship.toml";
+    ".fonts" = {
+        recursive = true;
+        source = "/home/ryan/.dotfiles/.fonts";
+      };
 
 
   };
