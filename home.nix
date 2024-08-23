@@ -22,7 +22,6 @@
     # # "Hello, world!" when run.
     # hello
     awesome
-    zsh
     wezterm
     alacritty
     polybar
@@ -30,7 +29,6 @@
     pcmanfm
     pavucontrol
     blueman
-    neovim
     emacs
     xscreensaver
     rofi
@@ -56,7 +54,6 @@
     roboto
     rubik
     virt-manager
-    git
     lazygit
     vlc
     ripgrep
