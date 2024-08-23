@@ -44,15 +44,15 @@
     fzf
     fd
     eza
-    nerdfonts
+    # nerdfonts
     cascadia-code
-    fira-code
-    inconsolata
-    inter
-    jetbrains-mono
-    meslo-lgs-nf
-    roboto
-    rubik
+    # fira-code
+    # inconsolata
+    # inter
+    # jetbrains-mono
+    # meslo-lgs-nf
+    # roboto
+    # rubik
     virt-manager
     lazygit
     vlc
