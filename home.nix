@@ -65,6 +65,7 @@
     gh
     btop
     font-awesome
+    pop-gtk-theme
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -198,6 +199,12 @@
          nvim-treesitter.withAllGrammars
        ];
        extraPackages = [ pkgs.gcc ];
+      };
+
+    gtk = {
+        enable = true;
+        iconTheme.package = kora-icon-theme;
+        theme.package = pop-gtk-theme;
       };
 
 }
