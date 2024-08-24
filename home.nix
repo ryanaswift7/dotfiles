@@ -185,7 +185,7 @@
           ll = "eza --long --all --sort=type";
           ".." = "cd ..";
           python = "python3";
-          cat = "bat";
+          cat = "/home/ryan/.nix-profile/bin/bat";
         };
     };
 
