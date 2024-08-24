@@ -203,7 +203,10 @@
 
     gtk = {
         enable = true;
-        iconTheme.package = pkgs.kora-icon-theme;
+        iconTheme = {
+          package = pkgs.kora-icon-theme;
+          name = "Kora";
+        };
         theme = {
           package = pkgs.pop-gtk-theme;
           name = "Pop Theme";
