@@ -179,6 +179,8 @@
         };
       shellAliases = {
           ll = "eza --long --all --sort=type";
+          .. = "cd ..";
+          python = "python3";
         };
     };
 
