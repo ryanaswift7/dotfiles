@@ -220,6 +220,17 @@
             name = "Simp1e-Gruvbox-Dark";
             package = pkgs.simp1e-cursors;
           };
+        gtk3.extraConfig = {
+            Settings = ''
+              gtk-application-prefer-dark-theme=1
+                '';
+            };
+
+        gtk4.extraConfig = {
+            Settings = ''
+              gtk-application-prefer-dark-theme=1
+                '';
+          };
       };
 
 }
