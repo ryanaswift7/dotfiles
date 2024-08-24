@@ -204,7 +204,10 @@
     gtk = {
         enable = true;
         iconTheme.package = pkgs.kora-icon-theme;
-        theme.package = pkgs.pop-gtk-theme;
+        theme = {
+          package = pkgs.pop-gtk-theme;
+          name = "Pop Theme";
+          };
       };
 
 }
