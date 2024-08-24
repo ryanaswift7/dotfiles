@@ -291,6 +291,9 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "b", function()
 		awful.spawn(browser)
 	end, { description = "open browser", group = "applications" }),
+	awful.key({ "Alt" }, "b", function()
+		awful.spawn("btop")
+	end, { description = "open btop", group = "applications" }),
 	awful.key({ modkey }, "y", function()
 		awful.spawn(browser .. " youtube.com")
 	end, { description = "open youtube", group = "applications" }),
