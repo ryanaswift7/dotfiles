@@ -68,6 +68,7 @@
     pop-gtk-theme
     xdg-desktop-portal-gtk
     bat
+    lxappearance
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -210,10 +211,6 @@
           package = pkgs.kora-icon-theme;
           name = "Kora";
         };
-        theme = {
-          package = pkgs.pop-gtk-theme;
-          name = "Pop Theme";
-          };
       };
 
 }
