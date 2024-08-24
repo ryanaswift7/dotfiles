@@ -209,7 +209,7 @@
     gtk = {
         enable = true;
         iconTheme = {
-          name = "Kora";
+          name = "kora";
           package = pkgs.kora-icon-theme;
         };
         theme = {
