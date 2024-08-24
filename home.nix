@@ -217,7 +217,7 @@
             package = pkgs.pop-gtk-theme;
         };
         cursorTheme = {
-            name = "Pop";
+            name = "pop";
             package = pkgs.pop-gtk-theme;
             # name = "Simp1e-Gruvbox-Dark";
             # package = pkgs.simp1e-cursors;
