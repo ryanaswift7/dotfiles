@@ -1,69 +1,47 @@
-# Welcome to My Dotfiles!  
-Hi friend! These are the configs for my Linux desktop setup.
-I'm running Pop!_OS 22.04 LTS, but I built most of the dependencies
-from source, so hopefully they'll work for you if you do the same.
-I plan on adding a script to this repo which will install all of
-the dependencies and symlink them into place, so keep an eye out
-for that. I'll try to make sure I list all of the dependencies,
-but it is very possible that I may forget some, so feel free
-to let me know if I made a goof. Hope you like it!
+# Welcome to My Dotfiles!
+Hi friend! Welcome to V2 of my dotfiles, where this time
+I'm using Nix Home Manager to do things a better way.
+I'm running Pop!_OS on all my machines, but I also tested
+on Ubuntu 20.04.06 LTS. I should hope Nix would make it
+such that the OS doesn't affect anything, but let me know
+if you're on another OS and get any weirdness.
 
-## Dependencies  
-Everything that isn't directly from APT has great documentation
-so search them on the interwebs and you should find installation
-instructions. Emacs is the most annoying, so if you have trouble
-with that, raise and issue and I'll try to help.
 
-### Built from Source  
-- Neovim 0.10.0
-- Emacs 29.4 (+native-compilation)
-- Polybar 3.7.1
-- Wezterm
+## Imperative Sadness
+There are a couple of things that I did imperatively
+(mostly for my sanity). I installed [nixGL] (https://github.com/nix-community/nixGL)
+imperatively using the nix-channel method. Yes, I could
+have used Flakes and that would be better but I didn't.
+Also, I left my theming to lxappearance because I could
+not get the Home Manager GTK options to work for some reason.
+All the packages are installed in HM, I just open lxappearance
+once during initial setup and set my theme, icons, and cursor.
 
-### Installed with APT Package Manager  
-- Pavucontrol
-- Blueman (and bm-applet)
-- Xscreensaver
-- Zsh
-- Rofi
-- Flameshot
-- Awesome
-- PCManFM
-- Picom
+## Other Notes
 
-### Other
-- Kora icon pack 1.6.1
-- Wezterm
-- Oh My ZSH
+#### Rofi
+The rofi theme repo I'm using has some custom patched fonts,
+so you just have to have them installed. That is all taken
+care of by HM, but just wanted to note it. I spent far too much
+time trying to get the glyphs in my powermenu to show up,
+only to realized that I have to use those *exact* fonts.
 
-## Install/Setup  
-Each file and folder has to be put into a particular location
-in the filesystem.
+#### Doom Emacs
+I'm a Neovim person, but I've dabbled a bit in Emacs (Doom, of course).
+I went through all of the trouble of previously compiling Emacs
+from source with native compilation, but Doom Emacs is still too slow
+for my preferences. All this to say, my Doom Emacs config files are there,
+but HM doesn't currently do anything with them. If I decide I want to use
+Doom again in the future, I'll figure out how to declaratively set it up
+with those configs. For now, they're just there for safe keeping.
 
-### $HOME Folder
-- .fonts/
-- .wezterm.lua
-- .xscreensaver
-- .zshrc
+#### AwesomeWM Wallpaper
+I realize that changing my wallpaper in Awesome will introduce
+a conflict, but for right now, I don't really care. I'll just keep
+the same image across all my machines until I think of a more modular
+way to set the wallpaper (and actually care enough to implement it).
 
-### Inside $HOME/.config/ Folder  
-- awesome/
-- doom/
-- nvim/
-- polybar/
-- rofi/
-
-### Inside $HOME/Pictures/wallpapers/
-- The JPG files
-
-## Likely Issues  
-I was silly and decided to do some things the wrong way.
-Namely, I:
-- symlinked all of the binaries I built into /usr/bin/,
-rather than add them to my PATH in my zsh
-- didn't use the $HOME environment variable and instead
-used the literal path (/home/ryan
-You can do the same as I did with the symlinking, or put
-them in the zshrc/bashrc files. You'll probably have to fix
-some file paths until I get around to making the edits and
-updating this repo.
+## Final Thoughts
+I don't really anticipate anyone else trying to use this repo,
+but if you do, let me know. I'd love to hear your thoughts on it.
+It's certainly not perfect, but I hope you enjoy!
