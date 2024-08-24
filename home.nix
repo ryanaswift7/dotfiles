@@ -69,6 +69,7 @@
     xdg-desktop-portal-gtk
     bat
     lxappearance
+    simp1e-cursors
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -205,12 +206,20 @@
        extraPackages = [ pkgs.gcc ];
       };
 
-    # gtk = {
-    #     enable = true;
-    #     iconTheme = {
-    #       package = pkgs.kora-icon-theme;
-    #       name = "Kora";
-    #     };
-    #   };
+    gtk = {
+        enable = true;
+        iconTheme = {
+          name = "Kora";
+          package = pkgs.kora-icon-theme;
+        };
+        theme = {
+            name = "Pop-dark";
+            package = pkgs.pop-gtk-theme;
+        };
+        cursorTheme = {
+            name = "Simp1e-Gruvbox-Dark";
+            package = pkgs.simp1e-cursors;
+          };
+      };
 
 }
