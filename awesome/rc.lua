@@ -291,8 +291,8 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "b", function()
 		awful.spawn(browser)
 	end, { description = "open browser", group = "applications" }),
-	awful.key({ "Mod1" }, "b", function()
-		awful.spawn("zsh -c 'wezterm -e -- nvim'")
+	awful.key({ "Alt_L" }, "b", function()
+		awful.spawn("zsh -c 'wezterm -e -- btop'")
 	end, { description = "open btop", group = "applications" }),
 	awful.key({ modkey }, "y", function()
 		awful.spawn(browser .. " youtube.com")
