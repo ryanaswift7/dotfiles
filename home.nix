@@ -203,8 +203,8 @@
 
     gtk = {
         enable = true;
-        iconTheme.package = kora-icon-theme;
-        theme.package = pop-gtk-theme;
+        iconTheme.package = pkgs.kora-icon-theme;
+        theme.package = pkgs.pop-gtk-theme;
       };
 
 }
