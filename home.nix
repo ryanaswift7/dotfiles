@@ -52,7 +52,7 @@
     jetbrains-mono
     meslo-lgs-nf
     roboto
-    rubik
+    # rubik
     virt-manager
     lazygit
     vlc
