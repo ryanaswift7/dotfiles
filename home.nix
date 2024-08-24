@@ -212,10 +212,10 @@
           name = "Kora";
           package = pkgs.kora-icon-theme;
         };
-        theme = {
-            name = "Pop-dark";
-            package = pkgs.pop-gtk-theme;
-        };
+        # theme = {
+        #     name = "Pop-dark";
+        #     package = pkgs.pop-gtk-theme;
+        # };
         cursorTheme = {
             name = "Simp1e-Gruvbox-Dark";
             package = pkgs.simp1e-cursors;
