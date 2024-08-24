@@ -10,12 +10,15 @@ if you're on another OS and get any weirdness.
 ## Imperative Sadness
 There are a couple of things that I did imperatively
 (mostly for my sanity). I installed [nixGL] (https://github.com/nix-community/nixGL)
-imperatively using the nix-channel method. Yes, I could
-have used Flakes and that would be better but I didn't.
-Also, I left my theming to lxappearance because I could
-not get the Home Manager GTK options to work for some reason.
-All the packages are installed in HM, I just open lxappearance
-once during initial setup and set my theme, icons, and cursor.
+imperatively using the nix-channel method. It's a 
+wrapper that allows OpenGL to work with HM-installed
+packages. For example, Alacritty needs it (`nixGL alacritty`).
+Wezterm would also need it, but for some reason the `GPU`
+front end doesn't render text correctly on the version
+in the Nixpkgs repo, so I'm using `WebGpu` and it works
+fine without the nixGL wrapper. Yes, I could have
+used Flakes to install NixGL and that would be
+better but I didn't.
 
 ## Other Notes
 
