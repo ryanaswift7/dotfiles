@@ -217,10 +217,8 @@
             package = pkgs.pop-gtk-theme;
         };
         cursorTheme = {
-            name = "pop";
-            package = pkgs.pop-gtk-theme;
-            # name = "Simp1e-Gruvbox-Dark";
-            # package = pkgs.simp1e-cursors;
+            name = "Simp1e-Adw-Dark";
+            package = pkgs.simp1e-cursors;
           };
         gtk3.extraConfig = {
             Settings = ''
