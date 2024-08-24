@@ -186,7 +186,7 @@
           ll = "eza --long --all --sort=type";
           ".." = "cd ..";
           python = "python3";
-          cat = "/home/ryan/.nix-profile/bin/bat";
+          # cat = "/home/ryan/.nix-profile/bin/bat";
         };
     };
 
@@ -205,12 +205,12 @@
        extraPackages = [ pkgs.gcc ];
       };
 
-    gtk = {
-        enable = true;
-        iconTheme = {
-          package = pkgs.kora-icon-theme;
-          name = "Kora";
-        };
-      };
+    # gtk = {
+    #     enable = true;
+    #     iconTheme = {
+    #       package = pkgs.kora-icon-theme;
+    #       name = "Kora";
+    #     };
+    #   };
 
 }
