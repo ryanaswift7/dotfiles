@@ -9,7 +9,7 @@ if you're on another OS and get any weirdness.
 
 ## Imperative Sadness
 There are a couple of things that I did imperatively
-(mostly for my sanity). I installed [nixGL] (https://github.com/nix-community/nixGL)
+(mostly for my sanity). I installed [nixGL](https://github.com/nix-community/nixGL)
 imperatively using the nix-channel method. It's a 
 wrapper that allows OpenGL to work with HM-installed
 packages. For example, Alacritty needs it (`nixGL alacritty`).
