@@ -178,7 +178,7 @@
           theme = "robbyrussell";
         };
       shellAliases = {
-          ll = "eza --long --all --sort=type"
+          ll = "eza --long --all --sort=type";
         };
     };
 
