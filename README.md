@@ -19,16 +19,36 @@ good to go!
 
 ## Imperative Sadness
 There are a couple of things that I did imperatively
-(mostly for my sanity). I installed [nixGL](https://github.com/nix-community/nixGL)
+(mostly for my sanity). 
+
+#### NixGL
+I installed [nixGL](https://github.com/nix-community/nixGL)
 imperatively using the nix-channel method. It's a 
 wrapper that allows OpenGL to work with HM-installed
-packages. For example, Alacritty needs it (`nixGL alacritty`).
+packages. For example, Alacritty needs it (`nixGL alacritty`), and
+AwesomeWM is launched with it (`nixGL awesome`).
 Wezterm would also need it, but for some reason the `GPU`
 front end doesn't render text correctly on the version
 in the Nixpkgs repo, so I'm using `WebGpu` and it works
 fine without the nixGL wrapper. Yes, I could have
 used Flakes to install NixGL and that would be
 better but I didn't.
+
+#### Zsh as Default Shell
+I don't know of a good way to set the default user shell using home
+manager (which is probably a good thing from a security perspective),
+so I do it imperatively. Add the line  
+`/home/ryan/.nix-profile/bin/zsh`  
+to `/etc/shells`, then run  
+`chsh -s /home/ryan/.nix-profile/bin/zsh`  
+and that should take care of it. Might need to input sudo password.
+
+#### AwesomeWM Session Option
+I had to create an `awesome.desktop` file and put it in  
+`/usr/share/xsessions/`  
+to get the option to show up in my display manager. I've included the file in the repo, but since the file isn't going under the home directory, you'll need to imperatively set the symlink with  
+`sudo ln -s /home/ryan/.dotfiles/awesome.desktop /usr/share/xsessions/awesome.desktop`
+
 
 ## Other Notes
 
