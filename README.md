@@ -10,10 +10,10 @@ if you're on another OS and get any weirdness.
 You're gonna need to install [Nix](https://nixos.org/download/) and [Home Manager](https://nix-community.github.io/home-manager/index.xhtml#ch-installation). Since I'm using Home Manager on a non-NixOS distro,
 I'm using the standalone install method. Then clone
 this repo into your home directory. Then back up the
-default Home Manager config file with
-`mv ~/.config/home-manager/home.nix ~/.config/home-manager/home.nix.bak`
-and symlink in this repo's home.nix with
-`ln -s ~/.dotfiles/home.nix ~/.config/home-manager/home.nix`
+default Home Manager config file with  
+`mv ~/.config/home-manager/home.nix ~/.config/home-manager/home.nix.bak`  
+and symlink in this repo's home.nix with  
+`ln -s ~/.dotfiles/home.nix ~/.config/home-manager/home.nix`  
 Finally, run `home-manager switch` and you should be
 good to go!
 
