@@ -75,6 +75,7 @@
     conda
     openconnect
     ookla-speedtest
+    signal-desktop
 
     # Ensure Python and specific packages are installed
     home.packages = with pkgs; [
