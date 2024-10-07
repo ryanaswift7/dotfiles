@@ -21,17 +21,18 @@ return {
     local cmp = require("cmp")
     local defaults = require("cmp.config.default")()
     local auto_select = true
+    local selectBehavior = { behavior = cmp.SelectBehavior.Select }
     return {
-      auto_brackets = {}, -- configure any filetype to auto add brackets
+      auto_brackets = { "python" }, -- configure any filetype to auto add brackets
       completion = {
         completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
       },
       preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
       mapping = {
-        ["<C-j>"] = cmp.mapping.select_next_item(),
-        ["<C-k>"] = cmp.mapping.select_prev_item(),
+        ["<C-j>"] = cmp.mapping.select_next_item(selectBehavior),
+        ["<C-k>"] = cmp.mapping.select_prev_item(selectBehavior),
         ["<C-Space>"] = cmp.mapping.complete(),
-        ["<C-CR>"] = LazyVim.cmp.confirm({ select = true }),
+        ["<C-CR>"] = LazyVim.cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
         ["<C-y>"] = LazyVim.cmp.confirm({ select = true }),
         ["<S-CR>"] = LazyVim.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         ["<CR>"] = function(fallback)
@@ -67,9 +68,8 @@ return {
         end,
       },
       experimental = {
-        ghost_text = {
-          hl_group = "CmpGhostText",
-        },
+        --false,
+        ghost_text = { hl_group = "CmpGhostText" },
       },
       sorting = defaults.sorting,
     }
