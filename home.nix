@@ -74,6 +74,7 @@
     kdePackages.okular
     conda
     openconnect
+    ookla-speedtest
 
     # Ensure Python and specific packages are installed
     home.packages = with pkgs; [
