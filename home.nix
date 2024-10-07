@@ -73,6 +73,7 @@
     zotero
     kdePackages.okular
     conda
+    openconnect
 
     # Ensure Python and specific packages are installed
     home.packages = with pkgs; [
