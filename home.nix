@@ -235,4 +235,22 @@
           };
       };
 
+      # Enable SSH support in Home Manager
+      programs.ssh = {
+        enable = true;
+        # This will set up an SSH agent automatically
+        agent = {
+          enable = true;
+          # Optional: Add specific keys to the agent (replace with your key paths if needed)
+          # Default: It loads keys from `~/.ssh/id_rsa` or `~/.ssh/id_ed25519`
+          # identities = [];
+        };
+      };
+
+      # Configure SSH forwarding for all hosts
+      programs.ssh.extraConfig = ''
+        Host *
+          ForwardAgent yes
+      '';
+
 }
