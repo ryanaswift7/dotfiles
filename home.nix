@@ -72,6 +72,18 @@
     simp1e-cursors
     zotero
     kdePackages.okular
+    conda
+
+    # Ensure Python and specific packages are installed
+    home.packages = with pkgs; [
+      # Python interpreter (use your preferred Python version)
+      python3
+
+      # Python packages you want in your home environment
+      (python3.withPackages (ps: with ps; [
+      openconnect-sso
+      ]))
+    ];
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -188,8 +200,8 @@
       shellAliases = {
           ll = "eza --long --all --sort=type";
           ".." = "cd ..";
-          python = "python3";
-          # cat = "/home/ryan/.nix-profile/bin/bat";
+          p = "python3";
+          usc = "openconnect-sso -s vpn.usc.edu"
         };
     };
 
@@ -249,7 +261,16 @@
 
       # Configure SSH forwarding for all hosts
       programs.ssh.extraConfig = ''
-        Host *
+        Host server1
+          HostName netpd.usc.edu
+          User ryanswif
+          Port 6304
+          ForwardAgent yes
+
+        Host server2
+          HostName netpd.usc.edu
+          User ryanswif
+          Port 6305
           ForwardAgent yes
       '';
 
