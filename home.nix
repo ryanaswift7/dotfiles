@@ -202,6 +202,7 @@
           ".." = "cd ..";
           p = "python3";
           usc = "openconnect-sso -s vpn.usc.edu"
+          "tmux grab"="tmux attach-session -t"
         };
     };
 
